@@ -12,31 +12,33 @@ const app = new Vue ({
   el: '#app',
 
   data: {
-    email: []
+    email: [],
   },
 
   methods: {
     
-    getEmail(){
-      axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-      .then((response) => {
+    getItem(){
+      
+      for(let i = 0; i < 10; i++){
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((response) => {
 
-        this.email = response;
-        console.log('email', this.email);
+        const data = response.data;
+        this.email.push(data.response);
 
-      })
-      .catch((error) => {
-        console.log(error);
-      })
+        })
+        .catch((error) => {
+          console.log(error);
+        })
+      }
     }
 
-      
-    
   },
 
   mounted(){
 
-    this.getEmail();
+    this.getItem();
+  
   }
 
 })
