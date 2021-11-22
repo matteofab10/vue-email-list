@@ -38,8 +38,8 @@ const app = new Vue ({
   },
 
   mounted(){
-
-    this.getItem();
+    
+    // this.getItem()
   
   }
 
