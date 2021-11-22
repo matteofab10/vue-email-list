@@ -33,14 +33,9 @@ const app = new Vue ({
           this.httpError = true;
         })
       }
+
     }
 
   },
-
-  mounted(){
-    
-    // this.getItem()
-  
-  }
 
 })
