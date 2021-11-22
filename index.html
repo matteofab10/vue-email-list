@@ -9,9 +9,19 @@
 <body>
   
   <div id="app">
-    <ul>
-      <li v-for="item in email">{{item}}</li>
-    </ul>
+
+    <div v-if="!httpError">
+      
+      <ul>
+        <li v-for="item in email">{{item}}</li>
+      </ul>
+
+    </div>
+
+    <div v-else>
+      <h1>ERRORE!</h1>
+    </div>
+    
   </div>
 
 

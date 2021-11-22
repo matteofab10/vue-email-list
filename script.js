@@ -13,6 +13,7 @@ const app = new Vue ({
 
   data: {
     email: [],
+    httpError: false
   },
 
   methods: {
@@ -29,6 +30,7 @@ const app = new Vue ({
         })
         .catch((error) => {
           console.log(error);
+          this.httpError = true;
         })
       }
     }
